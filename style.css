@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+  color: red;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#errorPage {
+  padding: 100px 20px;
+}
+
+#ransomScreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ransom-icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.ransom-title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.ransom-message {
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: red;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.author {
+  margin-top: 20px;
+  font-size: 12px;
+}
